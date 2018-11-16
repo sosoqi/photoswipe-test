@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="maximum-dpr=2" name="flexible">
+    	<title>photoswipe</title>
+		<link href="photoswipe.css" rel="stylesheet" type="text/css">
+		<link href="default-skin/default-skin.css" rel="stylesheet" type="text/css">
+		<script src="flexible.js"></script>
+		<script src="jquery.min.js"></script>
+
+	</head>
+	
+	<body class="">
+
+				<div class="cont-doc img-swiper">
+					<!--需要点击全屏展示的图片需要按照这个格式 outer-page样式不可缺-->
+					<div class="outer-page">
+						<div class="inner-page scrollLoading">
+							<img src="images/img01.jpg" data-page="1" alt="图1">
+						</div>
+					</div>
+					<div class="outer-page">
+						<div class="inner-page scrollLoading">
+							<img src="images/img02.jpg" data-page="1" alt="图2">
+						</div>
+					</div>
+					<div class="outer-page">
+						<div class="inner-page scrollLoading">
+							<img src="images/img03.png" data-page="1" alt="图3">
+						</div>
+					</div>
+					<div class="outer-page">
+						<div class="inner-page scrollLoading">
+							<img src="images/img04.png" data-page="1" alt="图4">
+						</div>
+					</div>
+					<div class="outer-page">
+						<div class="inner-page scrollLoading">
+							<img src="images/img05.jpg" data-page="1" alt="图5">
+						</div>
+					</div>
+					<div class="outer-page">
+						<div class="inner-page scrollLoading">
+							<img src="images/img06.jpg" data-page="1" alt="图6">
+						</div>
+					</div>
+				</div>
+
+		<!--start-->
+
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+			<!-- Background of PhotoSwipe.
+                 It's a separate element as animating opacity is faster than rgba(). -->
+			<div class="pswp__bg"></div>
+
+			<!-- Slides wrapper with overflow:hidden. -->
+			<div class="pswp__scroll-wrap">
+
+				<!-- Container that holds slides.
+                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                    Don't modify these 3 pswp__item elements, data is added later on. -->
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+
+				<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+				<div class="pswp__ui pswp__ui--hidden">
+
+					<div class="pswp__top-bar">
+
+						<!--  Controls are self-explanatory. Order can be changed. -->
+
+						<div class="pswp__counter hide"></div>
+
+						<button class="pswp__button pswp__button--close hide" title="Close (Esc)"></button>
+
+						<button class="pswp__button pswp__button--share hide" title="Share"></button>
+
+						<button class="pswp__button pswp__button--fs hide" title="Toggle fullscreen"></button>
+
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+						<!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+						<!-- element will get class pswp__preloader--active when preloader is running -->
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div>
+					</div>
+
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+					</button>
+
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+					</button>
+
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="photoswipe.js"></script>
+		<script src="photoswipe-ui-default.min.js"></script>
+		<script src="imgSwipe.js"></script>
+		<script>
+			$(function(){
+				/*图片点击全屏*/
+				initPhotoSwipeFromDOM('.img-swiper');
+
+			})
+		</script>
+	</body>
+</html>
